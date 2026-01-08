@@ -86,9 +86,9 @@ public class Main {
                     }
                     if (isThereTask == false) {
                         System.out.println("There was no task");
-                    }
+                    }}
                     else if(choice == 3){
-boolean isupdate=false;
+
                         for (int count = 0; count < currentUser.getUserTask().length; count++) {
                             if (currentUser.getUserTask()[count] != null) {
                                 int replacement = count + 1;
@@ -96,20 +96,20 @@ boolean isupdate=false;
                                 System.out.println(currentUser.getUserTask()[count].getTaskDes());
                                 System.out.println("Enter the task number which you want to update ");
                                 Integer option = new Integer(sc.nextLine());
-                                int i = option + 1;
+                                int i = option - 1;
                                 System.out.println("Update the task");
                                 String update=new String(sc.nextLine());
                                 currentUser.getUserTask()[i].setTaskDes(update);
                                 System.out.println("Task updated successfully");
-                                isupdate=true;
+                                
                             }
                         }
-                        if(isupdate=false){
-                        System.out.println("There was no task");}
+                        
+                        System.out.println("There was no task");
                     }
 
                     else if(choice == 4){
-boolean isdelete=false;
+
                         for (int count = 0; count < currentUser.getUserTask().length; count++) {
                             if (currentUser.getUserTask()[count] != null) {
                                 int replacement = count + 1;
@@ -117,13 +117,13 @@ boolean isdelete=false;
                                 System.out.println(currentUser.getUserTask()[count].getTaskDes());
                                 System.out.println("Enter the tash number which you want to delete ");
                                 Integer option = new Integer(sc.nextLine());
-                                int i = option + 1;
+                                int i = option - 1;
                                 currentUser.getUserTask()[i] = null;
                                 System.out.println("Task deleted successfully");
-                                isdelete=true;
+                                
                             }
-                        }if(isdelete=false){
-                        System.out.println("There was no task");}
+                        }
+                        System.out.println("There was no task");
                     }
                     else if (choice == 5) {
                         System.out.println("Thanks");
@@ -132,4 +132,5 @@ boolean isdelete=false;
             }
         }
     }
-}
+
+
